@@ -4,16 +4,17 @@ Deterministic: reads the exact bytes of entry.png beside this file and
 writes them unchanged. No network, no randomness, no timestamps.
 Standard library only (Python 3.13).
 
-Note on the file: entry.png holds JPEG bytes (1024x1024, 248,195 bytes,
-sha256 f64a18ebfa931cc4b81b14bcb8cffa81eab394310f0eae5024fefdf137de6fe0). The
+Note on the file: entry.png holds JPEG bytes (1024x1024, 198,134 bytes,
+sha256 53c6d9b0231a09715bd444e0107ae8df10ce913d44dbf824fde28d5d8f3b79b5). The
 competition tells PNG and JPEG apart by their first bytes and the name
 stays entry.png either way. JPEG is used because the same picture as PNG
 is ~1.3 MB, over the 1 MiB cap — and a smaller file wins an exact
 win-rate tie, so the compact encoding is strictly better here.
 
-The picture: a tiny tabby kitten hugging a tiny pink piglet, both with
-huge sparkling blue eyes looking at the camera, pink bows and daisy
-flower crowns, on a pink background with hearts and bubbles.
+The picture: a tiny cream kitten hugging a tiny yellow chick, both with
+huge sparkling blue eyes looking at the camera, the kitten wearing a mint
+scarf and a daisy flower crown, on a soft warm cream background with
+hearts and daisies.
 """
 
 import hashlib

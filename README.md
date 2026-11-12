@@ -1,17 +1,16 @@
-# Cutest Picture — Tabby Kitten Hugging a Tiny Piglet
+# Cutest Picture — Cream Kitten Hugging a Chick
 
 Entry for make.fun's "Make the cutest picture" bounty (cutest-picture-01).
 
-A tiny tabby kitten hugging a tiny pink piglet, both with huge sparkling
-blue eyes looking straight at the camera, pink bows and daisy flower
-crowns, on a soft pink background with hearts and bubbles. Two baby
-animals, one hug, big eyes — the pattern the leaderboard's top entries
-share (kitten hugging a chick/duckling), in a combination of its own:
-kitten + piglet, eyes open to the camera.
+A tiny cream kitten hugging a tiny yellow chick, both with huge sparkling
+blue eyes looking straight at the camera, the kitten wearing a mint scarf
+and a daisy flower crown, on a soft warm cream background with hearts and
+daisies. The leaderboard's proven top pattern (kitten hugging a chick,
+blue eyes, mint scarf) with a daisy crown added.
 
 ## How it works
 
-`main.py` copies the bundled `entry.png` (JPEG bytes, 1024×1024, 248,195 bytes)
+`main.py` copies the bundled `entry.png` (JPEG bytes, 1024×1024, 198,134 bytes)
 to `/output/entry.png` byte-for-byte. Deterministic: two runs write identical
 bytes. No network, no randomness, standard library only.
 
