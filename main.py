@@ -4,18 +4,19 @@ Deterministic: reads the exact bytes of entry.png beside this file and
 writes them unchanged. No network, no randomness, no timestamps.
 Standard library only (Python 3.13).
 
-Note on the file: entry.png holds JPEG bytes (1024x1024, 212,976 bytes,
-sha256 c147a003926103f36631348b8ed4f8aaf079969d304adef6d8d5c32ab31c3467). The
+Note on the file: entry.png holds JPEG bytes (1024x1024, 131,031 bytes,
+sha256 6817380afb2ef7a4b9e2eeb499dead8bf9e0515dacc16a420ada79eb766a723c). The
 competition tells PNG and JPEG apart by their first bytes and the name
 stays entry.png either way. JPEG is used because the same picture as PNG
 is ~1.3 MB, over the 1 MiB cap — and a smaller file wins an exact
 win-rate tie, so the compact encoding is strictly better here.
 
-The picture: a tiny cream kitten gently nuzzling a tiny yellow chick,
-the kitten's cheek pressed softly against the chick, both with huge
-sparkling blue eyes looking at the camera, the kitten wearing a mint
-scarf and a daisy flower crown, on a soft warm cream background with
-hearts and daisies.
+The picture: a fluffy white kitten in cute cartoon 3D style, huge
+sparkling starry blue eyes, rosy pink cheeks and pink paw pads, wearing
+a mint green knitted scarf, gently hugging a tiny yellow chick that is
+sleeping peacefully with its eyes closed, on a plain warm cream
+background. Same winning pattern as the leaderboard top 1 (white kitten
++ chick + mint scarf), drawn as an original cartoon, not a photo.
 """
 
 import hashlib
@@ -44,7 +45,8 @@ assert _sha256(SRC) == _sha256(dst), "output differs from bundled image"
 # the JPEG SOF0/SOF2 marker with the standard library only.
 # (Source image was 1600x1600; resized to 1024x1024 at JPEG quality 92
 # before bundling, so the gate below always holds for this entry.
-# v3 image: tender-kiss frame, sha256 c147a003... — same resize path.)
+# v4 image: cartoon white kitten + sleeping chick, sha256 6817380a... —
+# same resize path.)
 def _jpeg_dimensions(path):
     with open(path, "rb") as f:
         data = f.read()

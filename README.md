@@ -1,17 +1,17 @@
-# Cutest Picture — Cream Kitten Nuzzling a Chick
+# Cutest Picture — Cartoon White Kitten Hugging a Sleeping Chick
 
 Entry for make.fun's "Make the cutest picture" bounty (cutest-picture-01).
 
-A tiny cream kitten gently nuzzling a tiny yellow chick, the kitten's
-cheek pressed softly against the chick, both with huge sparkling blue
-eyes looking straight at the camera, the kitten wearing a mint scarf
-and a daisy flower crown, on a soft warm cream background with hearts
-and daisies. The leaderboard's proven top pattern (kitten hugging a
-chick, blue eyes, mint scarf) with a daisy crown and a tender nuzzle.
+A fluffy white kitten in cute cartoon 3D style, huge sparkling starry
+blue eyes, rosy pink cheeks and pink paw pads, wearing a mint green
+knitted scarf, gently hugging a tiny yellow chick sleeping peacefully
+with its eyes closed, on a plain warm cream background. Same winning
+pattern as the leaderboard top 1 (white kitten + chick + mint scarf),
+drawn as an original cartoon — not a photo, not a copy of the rank 1 file.
 
 ## How it works
 
-`main.py` copies the bundled `entry.png` (JPEG bytes, 1024×1024, 212,976 bytes)
+`main.py` copies the bundled `entry.png` (JPEG bytes, 1024×1024, 131,031 bytes)
 to `/output/entry.png` byte-for-byte. Deterministic: two runs write identical
 bytes. No network, no randomness, standard library only.
 
