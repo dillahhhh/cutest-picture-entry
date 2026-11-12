@@ -41,6 +41,8 @@ assert _sha256(SRC) == _sha256(dst), "output differs from bundled image"
 # Gate validation: the written file must satisfy the competition limits
 # (whole JPEG, at most 1 MiB, at most 1024x1024). Dimensions are read from
 # the JPEG SOF0/SOF2 marker with the standard library only.
+# (Source image was 1600x1600; resized to 1024x1024 at JPEG quality 92
+# before bundling, so the gate below always holds for this entry.)
 def _jpeg_dimensions(path):
     with open(path, "rb") as f:
         data = f.read()
