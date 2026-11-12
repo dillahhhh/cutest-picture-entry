@@ -49,6 +49,11 @@ def _jpeg_dimensions(path):
         if data[i] != 0xFF:
             i += 1
             continue
+        # Skip 0xFF fill bytes and the 0xFF00 escape (a literal 0xFF byte
+        # inside entropy data), which carry no marker.
+        if data[i + 1] in (0xFF, 0x00):
+            i += 2
+            continue
         marker = data[i + 1]
         if marker in (0xC0, 0xC1, 0xC2):
             h = int.from_bytes(data[i + 5:i + 7], "big")
@@ -64,3 +69,6 @@ def _jpeg_dimensions(path):
 w, h = _jpeg_dimensions(dst)
 assert w <= 1024 and h <= 1024, f"image too large: {w}x{h}"
 assert os.path.getsize(dst) <= 1048576, "image over 1 MiB"
+
+print(f"wrote {dst}: {w}x{h} JPEG, {os.path.getsize(dst)} bytes, "
+      f"sha256 {_sha256(dst)[:16]}...")
